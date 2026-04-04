@@ -1,0 +1,68 @@
+\section{Tarefa 5.2: Projeto e montagem da celula basica de um comparador}
+
+Foi solicitado o projeto da celula basica de um comparador iterativo de duas palavras de $n$ bits. As saidas devem indicar, a cada etapa, se a palavra $A$ e maior que $B$, igual a $B$ ou menor que $B$. O relatorio deve apresentar a tabela-verdade da celula, as funcoes logicas obtidas, a montagem em protoboard e a descricao do funcionamento da rede iterativa.
+
+\subsection{Tabela-verdade da celula}
+
+\begin{table}[H]
+    \centering
+    \caption{Tabela-verdade da celula basica do comparador.}
+    \begin{tabular}{ccccccc}
+        \toprule
+        $A_i$ & $B_i$ & $Y_{1,i}$ & $Y_{3,i}$ & $Y_{1,i-1}$ & $Y_{2,i-1}$ & $Y_{3,i-1}$ \\
+        \midrule
+        0 & 0 & 0 & 0 & & & \\
+        0 & 0 & 0 & 1 & & & \\
+        0 & 1 & 0 & 0 & & & \\
+        0 & 1 & 0 & 1 & & & \\
+        1 & 0 & 0 & 0 & & & \\
+        1 & 0 & 0 & 1 & & & \\
+        1 & 1 & 0 & 0 & & & \\
+        1 & 1 & 0 & 1 & & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Funcoes logicas}
+
+\[
+Y_{1,i-1} = \underline{\hspace{8cm}}
+\]
+
+\[
+Y_{2,i-1} = \underline{\hspace{8cm}}
+\]
+
+\[
+Y_{3,i-1} = \underline{\hspace{8cm}}
+\]
+
+\subsection{Montagem}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{questao2/comparador_1bit.png}
+    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
+    \caption{Espaco reservado para a montagem da celula do comparador.}
+\end{figure}
+
+\subsection{Resultados experimentais}
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados obtidos para a celula basica do comparador.}
+    \begin{tabular}{ccccccc}
+        \toprule
+        $A_i$ & $B_i$ & $Y_{1,i}$ & $Y_{3,i}$ & $Y_{1,i-1}$ & $Y_{2,i-1}$ & $Y_{3,i-1}$ \\
+        \midrule
+        & & & & & & \\
+        & & & & & & \\
+        & & & & & & \\
+        & & & & & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Rede iterativa}
+
+Explique aqui como as celulas sao encadeadas para formar um comparador de $n$ bits e como se obtem as saidas globais $Y_1$, $Y_2$ e $Y_3$.

@@ -1,0 +1,68 @@
+\section{Tarefa 5.4: Projeto e montagem de um somador completo de 1 bit}
+
+Esta tarefa consistiu no projeto de um somador completo de 1 bit com propagacao do vai-um. A celula basica deve produzir a soma $S_i$ e o transporte $C_{i-1}$ a partir das entradas $A_i$, $B_i$ e $C_i$, com implementacao final usando somente portas NAND de duas entradas.
+
+\subsection{Tabela-verdade}
+
+\begin{table}[H]
+    \centering
+    \caption{Tabela-verdade da celula do somador completo.}
+    \begin{tabular}{ccccc}
+        \toprule
+        $A_i$ & $B_i$ & $C_i$ & $S_i$ & $C_{i-1}$ \\
+        \midrule
+        0 & 0 & 0 & & \\
+        0 & 0 & 1 & & \\
+        0 & 1 & 0 & & \\
+        0 & 1 & 1 & & \\
+        1 & 0 & 0 & & \\
+        1 & 0 & 1 & & \\
+        1 & 1 & 0 & & \\
+        1 & 1 & 1 & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Expressoes logicas}
+
+\[
+S_i = \underline{\hspace{8cm}}
+\]
+
+\[
+C_{i-1} = \underline{\hspace{8cm}}
+\]
+
+\subsection{Implementacao usando NAND2}
+
+Apresente aqui a minimizacao das expressoes e a implementacao usando somente portas NAND de duas entradas.
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{questao4/somador_nand.png}
+    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
+    \caption{Espaco reservado para o circuito em NAND2 do somador completo.}
+\end{figure}
+
+\subsection{Resultados experimentais}
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados experimentais do somador completo de 1 bit.}
+    \begin{tabular}{ccccc}
+        \toprule
+        $A_i$ & $B_i$ & $C_i$ & $S_i$ & $C_{i-1}$ \\
+        \midrule
+        0 & 0 & 0 & & \\
+        0 & 0 & 1 & & \\
+        0 & 1 & 0 & & \\
+        0 & 1 & 1 & & \\
+        1 & 0 & 0 & & \\
+        1 & 0 & 1 & & \\
+        1 & 1 & 0 & & \\
+        1 & 1 & 1 & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Discuta aqui a coerencia entre os resultados observados e o comportamento esperado.
