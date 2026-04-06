@@ -4,36 +4,26 @@ Nesta tarefa, foi solicitado montar em protoboard o circuito combinacional forne
 
 \subsection{Analise do circuito}
 
-Insira aqui a analise do arranjo de portas NAND e mostre, etapa por etapa, como se chega a funcao equivalente. Caso deseje, adicione uma foto da montagem ou o diagrama esquematico utilizado.
-
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.75\textwidth]{questao1/circuito_nand.png}
-    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
-    \caption{Espaco reservado para a montagem ou esquematico da Tarefa 5.1.}
-\end{figure}
-
-\subsection{Tabela-verdade}
+A Porta XOR foi construída seguindo o esquemático realizado pelo professor, ao término da montagem, foi testado todas as 4 combinações de entradas possíveis, chegando a seguinte tabela verdade
 
 \begin{table}[H]
     \centering
-    \caption{Tabela-verdade obtida para a saida $F$.}
+    \caption{Tabela-verdade obtida para a saída da porta lógica XOR construída}
     \begin{tabular}{ccc}
         \toprule
         $A$ & $B$ & $F$ \\
         \midrule
-        0 & 0 & \\
-        0 & 1 & \\
-        1 & 0 & \\
-        1 & 1 & \\
+        0   & 0   & 0   \\
+        0   & 1   & 1   \\
+        1   & 0   & 1   \\
+        1   & 1   & 0   \\
         \bottomrule
     \end{tabular}
+    \label{tab:tableXor}
 \end{table}
 
-\subsection{Expressao final}
+A partir da tabela verdade construída, vemos que a saída F bate com o resultado esperado para uma porta XOR de duas entradas, dessa maneira:
 
-\[
-F(A,B) = \underline{\hspace{8cm}}
-\]
-
-Comente aqui se o resultado medido coincidiu com o comportamento esperado.
+\begin{equation}
+    F = A \oplus B
+\end{equation}

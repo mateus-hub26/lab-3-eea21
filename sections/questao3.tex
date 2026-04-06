@@ -1,68 +1,57 @@
-\section{Tarefa 5.3: Projeto e montagem de um subtrator completo de 1 bit}
+\section{Tarefa 5.3: Montagem de um circuito comparador}
 
-Nesta etapa, foi solicitado projetar e montar um subtrator completo de 1 bit com propagacao do empresta-um. A celula basica deve produzir a diferenca $S_i$ e o sinal de emprestimo $E_{i-1}$ a partir das entradas $A_i$, $B_i$ e $E_i$, utilizando somente portas NAND de duas entradas na implementacao final.
+Para o circuito do comparador, foi utilizado o circuito esquemático disponibilizado pelo professor e suas tabelas verdades derivadas, assim, foi possível achar as fórmulas para cada uma das saídas esperadas
 
-\subsection{Tabela-verdade}
+\begin{equation}
+    \begin{aligned}
+        Y_{1,i-1}  & = Y_{1, i} + A_i \cdot \overline{B_i} \cdot \overline{Y_{3, i}} \\
+        Y_{3, i-1} & = Y_{3, i} + \overline{A_i} \cdot B_i \cdot \overline{Y_{1, i}}
+    \end{aligned}
+\end{equation}
 
-\begin{table}[H]
-    \centering
-    \caption{Tabela-verdade da celula do subtrator completo.}
-    \begin{tabular}{ccccc}
-        \toprule
-        $A_i$ & $B_i$ & $E_i$ & $S_i$ & $E_{i-1}$ \\
-        \midrule
-        0 & 0 & 0 & & \\
-        0 & 0 & 1 & & \\
-        0 & 1 & 0 & & \\
-        0 & 1 & 1 & & \\
-        1 & 0 & 0 & & \\
-        1 & 0 & 1 & & \\
-        1 & 1 & 0 & & \\
-        1 & 1 & 1 & & \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\subsection{Expressoes logicas}
-
-\[
-S_i = \underline{\hspace{8cm}}
-\]
-
-\[
-E_{i-1} = \underline{\hspace{8cm}}
-\]
-
-\subsection{Implementacao usando NAND2}
-
-Mostre aqui a minimizacao das expressoes e a reescrita em uma forma adequada para implementacao apenas com portas NAND de duas entradas. Se desejar, inclua mapas de Karnaugh ou transformacoes algebricas.
+Assim, seu circuito foi montado e é mostrado na figura a seguir:
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.8\textwidth]{questao3/subtrator_nand.png}
-    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
-    \caption{Espaco reservado para o circuito em NAND2 do subtrator completo.}
+    \includegraphics[angle=90, width=8cm]{SegundoDesligado.jpeg}
+    \caption{Circuito comparador de 4 entradas e 2 saídas}
+    \label{fig:comparadorDesl}
 \end{figure}
 
-\subsection{Resultados experimentais}
+Onde o CI mais a esquerda é o U1 o do meio o U2 e o mais a direita o U3.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{SegundoLigado.jpeg}
+    \caption{Circuito compardor alimentado}
+    \label{fig:comparadorLig}
+\end{figure}
+
+A partir do circuito alimentado, foi permitido montar a tabela verdade, expressa a seguir
 
 \begin{table}[H]
     \centering
-    \caption{Resultados experimentais do subtrator completo de 1 bit.}
-    \begin{tabular}{ccccc}
+    \caption{Tabela-verdade da celula basica do comparador.}
+    \begin{tabular}{ccccccc}
         \toprule
-        $A_i$ & $B_i$ & $E_i$ & $S_i$ & $E_{i-1}$ \\
+        $Y_{1,i}$ & $Y_{3,i}$ & $A_i$ & $B_i$ & $Y_{1,i-1}$ & $Y_{3,i-1}$ \\
         \midrule
-        0 & 0 & 0 & & \\
-        0 & 0 & 1 & & \\
-        0 & 1 & 0 & & \\
-        0 & 1 & 1 & & \\
-        1 & 0 & 0 & & \\
-        1 & 0 & 1 & & \\
-        1 & 1 & 0 & & \\
-        1 & 1 & 1 & & \\
+        0         & 0         & 0     & 0     & 0           & 0           \\
+        0         & 0         & 0     & 1     & 0           & 1           \\
+        0         & 0         & 1     & 0     & 1           & 0           \\
+        0         & 0         & 1     & 1     & 0           & 0           \\
+        0         & 1         & 0     & 0     & 0           & 1           \\
+        0         & 1         & 0     & 1     & 0           & 1           \\
+        0         & 1         & 1     & 0     & 0           & 1           \\
+        0         & 1         & 1     & 1     & 0           & 1           \\
+        1         & 0         & 0     & 0     & 1           & 0           \\
+        1         & 0         & 0     & 1     & 1           & 0           \\
+        1         & 0         & 1     & 0     & 1           & 0           \\
+        1         & 0         & 1     & 1     & 1           & 0           \\
+        1         & 1         & 0     & 0     & 1           & 1           \\
+        1         & 1         & 0     & 1     & 1           & 1           \\
+        1         & 1         & 1     & 0     & 1           & 1           \\
+        1         & 1         & 1     & 1     & 1           & 1           \\
         \bottomrule
     \end{tabular}
 \end{table}
-
-Compare aqui os resultados medidos com os valores esperados teoricamente.

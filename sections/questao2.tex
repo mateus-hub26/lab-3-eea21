@@ -1,68 +1,115 @@
-\section{Tarefa 5.2: Projeto e montagem da celula basica de um comparador}
+\section{Tarefa 5.2: Montagem dos circuitos subtrator e somador}
 
-Foi solicitado o projeto da celula basica de um comparador iterativo de duas palavras de $n$ bits. As saidas devem indicar, a cada etapa, se a palavra $A$ e maior que $B$, igual a $B$ ou menor que $B$. O relatorio deve apresentar a tabela-verdade da celula, as funcoes logicas obtidas, a montagem em protoboard e a descricao do funcionamento da rede iterativa.
+\subsection{Subtrator}
 
-\subsection{Tabela-verdade da celula}
+O professor da disciplina de EEA-21 disponibilizou os esquemáticos do subtrator de 3 entradas. Dessa maneira, utilizando as duas portas lógicas XOR previamente construídas. Portanto, considerando que as entradas do Subtrator é composta por $A$, $B$, $E_{i-1}$, onde $A$ é o bit do minuendo, $B$ é o bit do subtraendo e $E_{i-1}$ é o bit de \textit{borrow-in}, ou seja, se a casa anterior, bit menos significativo, precisou "emprestar" 1 para essa posição
 
-\begin{table}[H]
-    \centering
-    \caption{Tabela-verdade da celula basica do comparador.}
-    \begin{tabular}{ccccccc}
-        \toprule
-        $A_i$ & $B_i$ & $Y_{1,i}$ & $Y_{3,i}$ & $Y_{1,i-1}$ & $Y_{2,i-1}$ & $Y_{3,i-1}$ \\
-        \midrule
-        0 & 0 & 0 & 0 & & & \\
-        0 & 0 & 0 & 1 & & & \\
-        0 & 1 & 0 & 0 & & & \\
-        0 & 1 & 0 & 1 & & & \\
-        1 & 0 & 0 & 0 & & & \\
-        1 & 0 & 0 & 1 & & & \\
-        1 & 1 & 0 & 0 & & & \\
-        1 & 1 & 0 & 1 & & & \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+A partir da tabela verdade do subtrator, foi-se possível deduzir uma fórmula para os bits de saída $S_i$ e $E_i$, assim:
 
-\subsection{Funcoes logicas}
+\begin{equation}
+    \begin{array}{rcl}
+        S_i & = & A \oplus B \oplus E_{i-1}                               \\
+        E_i & = & \bar{A} \cdot B + \bar{A}\cdot E_{i-1} + B\cdot E_{i-1}
+    \end{array}
+\end{equation}
 
-\[
-Y_{1,i-1} = \underline{\hspace{8cm}}
-\]
+O bit "borrow-out" foi desenvolvido para a utilização de apenas portas NAND de duas entradas e sua expressão é posto a seguir:
 
-\[
-Y_{2,i-1} = \underline{\hspace{8cm}}
-\]
+\begin{equation}
+    E_i = \overline{
+        \overline{\overline{A_i} \cdot B_i} \cdot
+        \overline{E_{i-1} \cdot \overline{A_i \cdot \overline{B_i}}}
+    }
+\end{equation}
 
-\[
-Y_{3,i-1} = \underline{\hspace{8cm}}
-\]
-
-\subsection{Montagem}
+Os circuitos são mostrados montados nas figuras a seguir:
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.8\textwidth]{questao2/comparador_1bit.png}
-    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
-    \caption{Espaco reservado para a montagem da celula do comparador.}
+    \includegraphics[angle=90, width=8cm]{PrimeiroDesligado.jpeg}
+    \caption{Montagem do circuito subtrator, onde os 2 CI's a esquerda representam as duas portas lógicas XOR e o circuito a direita o circuito que contém a saída $E_i$}
+    \label{fig:subtratorDesl}
 \end{figure}
 
-\subsection{Resultados experimentais}
-
-\begin{table}[H]
+\begin{figure}[H]
     \centering
-    \caption{Resultados obtidos para a celula basica do comparador.}
-    \begin{tabular}{ccccccc}
+    \includegraphics[angle=90, width=8cm]{PrimeiroLigado1.jpeg}
+    \caption{Circuito subtrator alimentado}
+    \label{fig:subtratorLig}
+\end{figure}
+
+Com isso, foi possível realizar a tabela verdade, mostrada a seguir:
+
+\begin{table}[!ht]
+    \centering
+    \caption{Tabela-verdade da celula do subtrator completo.}
+    \begin{tabular}{ccccc}
         \toprule
-        $A_i$ & $B_i$ & $Y_{1,i}$ & $Y_{3,i}$ & $Y_{1,i-1}$ & $Y_{2,i-1}$ & $Y_{3,i-1}$ \\
+        $A_i$ & $B_i$ & $E_{i-1}$ & $S_i$ & $E_i$ \\
         \midrule
-        & & & & & & \\
-        & & & & & & \\
-        & & & & & & \\
-        & & & & & & \\
+        0     & 0     & 0         & 0     & 0     \\
+        0     & 0     & 1         & 1     & 1     \\
+        0     & 1     & 0         & 1     & 1     \\
+        0     & 1     & 1         & 0     & 1     \\
+        1     & 0     & 0         & 1     & 0     \\
+        1     & 0     & 1         & 0     & 0     \\
+        1     & 1     & 0         & 0     & 0     \\
+        1     & 1     & 1         & 1     & 1     \\
         \bottomrule
     \end{tabular}
+    \label{tab:Subtrator}
 \end{table}
 
-\subsection{Rede iterativa}
+Batendo com a tabela verdade esperada de um subtrator.
 
-Explique aqui como as celulas sao encadeadas para formar um comparador de $n$ bits e como se obtem as saidas globais $Y_1$, $Y_2$ e $Y_3$.
+\subsection{Somador}
+
+Para o somador, bastou trocar os lugares onde possuiam entrada $A_i$ e $\overline{A_i}$, fazendo a troca, ou seja, apenas se fez:
+
+\begin{equation}
+    \begin{aligned}
+        A_i            & \rightarrow \overline{A_i} \\
+        \overline{A_i} & \rightarrow {A_i}
+    \end{aligned}
+\end{equation}
+
+Com isso, as fórmulas para o somador derivam da do subtrator, encontrando:
+
+\begin{equation}
+    \begin{array}{rcl}
+        S_i & = & \overline{A} \oplus B \oplus C_{i-1}        \\
+        C_i & = & A \cdot B + A\cdot C_{i-1} + B\cdot C_{i-1}
+    \end{array}
+\end{equation}
+
+\begin{equation}
+    C_i = \overline{
+        \overline{A_i \cdot B_i} \cdot
+        \overline{C_{i-1} \cdot \overline{\overline{A_i} \cdot \overline{B_i}}}
+    }
+\end{equation}
+
+O grupo esqueceu de tirar a foto da montagem do somador, entretando, ele foi montado e foi possível realizar sua tabela verdade, resultando em:
+
+\begin{table}[!ht]
+    \centering
+    \caption{Tabela-verdade da celula do subtrator completo.}
+    \begin{tabular}{ccccc}
+        \toprule
+        $A_i$ & $B_i$ & $C_{i-1}$ & $S_i$ & $C_i$ \\
+        \midrule
+        0     & 0     & 0         & 0     & 0     \\
+        0     & 0     & 1         & 1     & 0     \\
+        0     & 1     & 0         & 1     & 0     \\
+        0     & 1     & 1         & 0     & 1     \\
+        1     & 0     & 0         & 1     & 0     \\
+        1     & 0     & 1         & 0     & 1     \\
+        1     & 1     & 0         & 0     & 1     \\
+        1     & 1     & 1         & 1     & 1     \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:Somador}
+\end{table}
+
+Resultando em uma tabela verdade esperada para um somador
+
