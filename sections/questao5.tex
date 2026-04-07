@@ -1,52 +1,60 @@
-\section{Tarefa 6.1: Projeto e simulacao de um circuito multiplicador de 2 bits}
+\section{Tarefa 6.1: Projeto e simula\c{c}\~ao de um circuito multiplicador de 2 bits}
 
-Na etapa de simulacao, foi solicitado projetar um circuito capaz de multiplicar dois numeros de 2 bits, gerando um produto de 4 bits. O relatorio deve conter o desenvolvimento do esquematico, as equacoes obtidas e o diagrama de temporizacao referente aos casos pedidos no roteiro.
+Na etapa de simula\c{c}\~ao, foi solicitado projetar um circuito capaz de multiplicar dois n\'umeros de 2 bits, gerando um produto de 4 bits. O relat\'orio deve conter o desenvolvimento do esquem\'atico, as equa\c{c}\~oes obtidas e o diagrama de temporiza\c{c}\~ao referente aos casos pedidos no roteiro.
 
 \subsection{Desenvolvimento do projeto}
 
-Descreva aqui a estrategia de projeto do multiplicador, incluindo a geracao dos produtos parciais e a forma como eles sao combinados para produzir o resultado final.
+O projeto foi feito a partir da gera\c{c}\~ao dos produtos parciais com portas AND entre os bits de entrada $A_1A_0$ e $B_1B_0$. O bit menos significativo \'e dado diretamente por $C_0 = A_0B_0$. Para o segundo bit, somam-se os termos cruzados $A_0B_1$ e $A_1B_0$ com uma porta XOR, produzindo $M_1$. O terceiro bit \'e obtido com a soma (XOR) entre $A_1B_1$ e o carry da soma anterior, que \'e $(A_0B_1)(A_1B_0)$, resultando em $M_2$. Por fim, o bit mais significativo $M_3$ corresponde ao carry final, implementado no esquem\'atico como o produto $A_1A_0B_1B_0$.
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.85\textwidth]{questao5/multiplicador_esquematico.png}
-    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
-    \caption{Espaco reservado para o diagrama esquematico do multiplicador de 2 bits.}
+    \includegraphics[width=0.95\textwidth]{esquematico.png}
+    \caption{Diagrama esquem\'atico do multiplicador de 2 bits.}
 \end{figure}
 
-\subsection{Equacoes do circuito}
+\subsection{Equa\c{c}\~oes do circuito}
 
 \[
-    P_0 = \underline{\hspace{8cm}}
+    P_0 = C_0 = A_0 \cdot B_0
 \]
 
 \[
-    P_1 = \underline{\hspace{8cm}}
+    P_1 = M_1 = (A_0 \cdot B_1) \oplus (A_1 \cdot B_0)
 \]
 
 \[
-    P_2 = \underline{\hspace{8cm}}
+    P_2 = M_2 = (A_1 \cdot B_1) \oplus \left[(A_0 \cdot B_1) \cdot (A_1 \cdot B_0)\right]
 \]
 
 \[
-    P_3 = \underline{\hspace{8cm}}
+    P_3 = M_3 = A_1 \cdot A_0 \cdot B_1 \cdot B_0
 \]
 
-\subsection{Simulacao funcional}
+\subsection{Simula\c{c}\~ao funcional}
 
-Apresente os resultados para os seguintes casos:
-
-\begin{itemize}
-    \item $(10)_b \times (11)_b$;
-    \item $(10)_b \times (00)_b$;
-    \item $(01)_b \times (01)_b$;
-    \item $(11)_b \times (11)_b$.
-\end{itemize}
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.9\textwidth]{questao5/temporizacao.png}
-    \fbox{\rule{0pt}{5cm}\rule{0.8\textwidth}{0pt}}
-    \caption{Espaco reservado para o diagrama de temporizacao da simulacao.}
+    \includegraphics[width=0.9\textwidth]{\detokenize{produto 1011.png}}
+    \caption{Temporiza\c{c}\~ao para $(10)_b \times (11)_b$ (entrada 1011, sa\'ida 0110).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\detokenize{produto 1000.png}}
+    \caption{Temporiza\c{c}\~ao para $(10)_b \times (00)_b$ (entrada 1000, sa\'ida 0000).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\detokenize{produto 0101.png}}
+    \caption{Temporiza\c{c}\~ao para $(01)_b \times (01)_b$ (entrada 0101, sa\'ida 0001).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\detokenize{produto 1111.png}}
+    \caption{Temporiza\c{c}\~ao para $(11)_b \times (11)_b$ (entrada 1111, sa\'ida 1001).}
 \end{figure}
 
 \begin{table}[H]
@@ -54,16 +62,16 @@ Apresente os resultados para os seguintes casos:
     \caption{Resultados esperados para os casos simulados.}
     \begin{tabular}{ccc}
         \toprule
-        Operacao               & Resultado esperado & Resultado simulado \\
+        Opera\c{c}\~ao          & Resultado esperado & Resultado simulado \\
         \midrule
-        $(10)_b \times (11)_b$ & $(0110)_b$         &                    \\
-        $(10)_b \times (00)_b$ & $(0000)_b$         &                    \\
-        $(01)_b \times (01)_b$ & $(0001)_b$         &                    \\
-        $(11)_b \times (11)_b$ & $(1001)_b$         &                    \\
+        $(10)_b \times (11)_b$ & $(0110)_b$         & $(0110)_b$         \\
+        $(10)_b \times (00)_b$ & $(0000)_b$         & $(0000)_b$         \\
+        $(01)_b \times (01)_b$ & $(0001)_b$         & $(0001)_b$         \\
+        $(11)_b \times (11)_b$ & $(1001)_b$         & $(1001)_b$         \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-\subsection{Comentarios}
+\subsection{Coment\'arios}
 
-Inclua aqui as observacoes finais sobre a simulacao e a coerencia dos resultados com o comportamento esperado do circuito.
+    Os resultados simulados coincidem com os valores esperados para os quatro casos pedidos no roteiro. Isso confirma que o esquem\'atico implementa corretamente a multiplica\c{c}\~ao de 2 bits, com sa\'ida organizada como $P_3P_2P_1P_0 = M_3M_2M_1C_0$.

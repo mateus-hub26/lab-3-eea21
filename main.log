@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.10)  4 APR 2026 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.10)  7 APR 2026 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,24 +838,84 @@ al com por-tas NAND2[] []
  [1
 
 {C:/Users/levif/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(sections/questao1.tex) (sections/questao2.tex [2] [3]) (sections/questao3.tex
-[4]) (sections/questao4.tex [5] [6]) (sections/questao5.tex [7]) [8] (main.aux)
+(sections/questao1.tex) (sections/questao2.tex
+<imagens/PrimeiroDesligado.jpeg, id=73, 723.70375pt x 1606.0pt>
+File: imagens/PrimeiroDesligado.jpeg Graphic file (type jpg)
+<use imagens/PrimeiroDesligado.jpeg>
+Package pdftex.def Info: imagens/PrimeiroDesligado.jpeg  used on input line 29.
+
+(pdftex.def)             Requested size: 723.70198pt x 1605.99611pt.
+ [2]
+<imagens/PrimeiroLigado1.jpeg, id=90, 723.70375pt x 1606.0pt>
+File: imagens/PrimeiroLigado1.jpeg Graphic file (type jpg)
+<use imagens/PrimeiroLigado1.jpeg>
+Package pdftex.def Info: imagens/PrimeiroLigado1.jpeg  used on input line 36.
+(pdftex.def)             Requested size: 723.70198pt x 1605.99611pt.
+ [3 <./imagens/PrimeiroDesligado.jpeg> <./imagens/PrimeiroLigado1.jpeg>]) (sect
+ions/questao3.tex
+<imagens/SegundoDesligado.jpeg, id=99, 963.6pt x 1284.8pt>
+File: imagens/SegundoDesligado.jpeg Graphic file (type jpg)
+<use imagens/SegundoDesligado.jpeg>
+Package pdftex.def Info: imagens/SegundoDesligado.jpeg  used on input line 16.
+(pdftex.def)             Requested size: 963.59766pt x 1284.79688pt.
+<imagens/SegundoLigado.jpeg, id=100, 963.6pt x 1284.8pt>
+File: imagens/SegundoLigado.jpeg Graphic file (type jpg)
+<use imagens/SegundoLigado.jpeg>
+Package pdftex.def Info: imagens/SegundoLigado.jpeg  used on input line 25.
+(pdftex.def)             Requested size: 170.71652pt x 227.60759pt.
+ [4 <./imagens/SegundoDesligado.jpeg>]) (sections/questao5.tex [5 <./imagens/Se
+gundoLigado.jpeg>]
+<imagens/esquematico.png, id=116, 1068.99374pt x 316.18124pt>
+File: imagens/esquematico.png Graphic file (type png)
+<use imagens/esquematico.png>
+Package pdftex.def Info: imagens/esquematico.png  used on input line 11.
+(pdftex.def)             Requested size: 432.48051pt x 127.9176pt.
+<imagens/produto 1011.png, id=118, 1436.36626pt x 188.95593pt>
+File: imagens/produto 1011.png Graphic file (type png)
+<use imagens/produto 1011.png>
+Package pdftex.def Info: imagens/produto 1011.png  used on input line 38.
+(pdftex.def)             Requested size: 409.71692pt x 53.89912pt.
+ [6 <./imagens/esquematico.png>]
+<imagens/produto 1000.png, id=125, 1423.56844pt x 164.86594pt>
+File: imagens/produto 1000.png Graphic file (type png)
+<use imagens/produto 1000.png>
+Package pdftex.def Info: imagens/produto 1000.png  used on input line 44.
+(pdftex.def)             Requested size: 409.71692pt x 47.44763pt.
+<imagens/produto 0101.png, id=126, 1440.88312pt x 162.6075pt>
+File: imagens/produto 0101.png Graphic file (type png)
+<use imagens/produto 0101.png>
+Package pdftex.def Info: imagens/produto 0101.png  used on input line 50.
+(pdftex.def)             Requested size: 409.71692pt x 46.23692pt.
+<imagens/produto 1111.png, id=127, 1416.79312pt x 164.86594pt>
+File: imagens/produto 1111.png Graphic file (type png)
+<use imagens/produto 1111.png>
+Package pdftex.def Info: imagens/produto 1111.png  used on input line 56.
+(pdftex.def)             Requested size: 409.71692pt x 47.67656pt.
+) [7 <./imagens/produto 1011.png> <./imagens/produto 1000.png> <./imagens/produ
+to 0101.png> <./imagens/produto 1111.png>] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 68333A67E15D3776686EB30652C4EF22;5085.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 2AE11B0170DDB3E3481C18BCF20181CF;2428
+(rerunfilecheck)             After:  601E9AC9258E7642FD632CE54DE66CEE;2449.
  ) 
 Here is how much of TeX's memory you used:
- 22817 strings out of 467867
- 424150 string characters out of 5418334
- 838436 words of memory out of 5000000
- 51244 multiletter control sequences out of 15000+600000
- 641821 words of font info for 79 fonts, out of 8000000 for 9000
+ 22889 strings out of 467867
+ 426402 string characters out of 5418334
+ 834002 words of memory out of 5000000
+ 51327 multiletter control sequences out of 15000+600000
+ 642168 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,121p,675b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\levif\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+ 117i,10n,121p,675b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\levif\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
 1200.pk> <C:\Users\levif\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecbx1440.pk> <C:\Users\levif\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecrm1200.pk> <C:\Users\levif\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
@@ -871,9 +931,9 @@ Users/levif/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
 fb><C:/Users/levif/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><C:/Users/levif/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb>
-Output written on main.pdf (8 pages, 171610 bytes).
+Output written on main.pdf (7 pages, 846505 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
