@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1775575575.3684 "c:/Users/levif/OneDrive/Área de Trabalho/arquivos - ITA/primeiro semestre/EEA-21/lab3/lab3_eea21/main.tex" "main.pdf" "main" 1775575577.91631 0
+["pdflatex"] 1775575988.35543 "c:/Users/levif/OneDrive/Área de Trabalho/arquivos - ITA/primeiro semestre/EEA-21/lab3/lab3_eea21/main.tex" "main.pdf" "main" 1775575990.48353 0
   "C:/Users/levif/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775137071 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/levif/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1773970254 31952 77961fb8134b3d9b2af8ae9223bb2069 ""
   "C:/Users/levif/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1773970251 40136 b0041db3b20064cfa87dc2f6a149f6e6 ""
@@ -179,19 +179,19 @@
   "imagens/PrimeiroLigado1.jpeg" 1775522915 173891 e418c71481b05f448390f3d5cb3bcf6e ""
   "imagens/SegundoDesligado.jpeg" 1775522915 152309 4c71f22c7b9297c5c89d158c8c6768a9 ""
   "imagens/SegundoLigado.jpeg" 1775522915 128119 9ec9b5b781b5a71b0cde3b85186bf719 ""
-  "imagens/esquematico.png" 1775570969 27908 112e91654f1a8aae64dd655e11991583 ""
+  "imagens/esquematico.png" 1775575515 26768 cf8e43681420cdec89d643e7d784db1d ""
   "imagens/produto 0101.png" 1775571943 17955 ee5827c4d3d00c546fb7080682be06ae ""
   "imagens/produto 1000.png" 1775572153 17709 32ed0e21ccbbd41ad63c9496a2dd9504 ""
   "imagens/produto 1011.png" 1775572069 19071 e5ed521fc2a12a5aa83bb71acb6c948e ""
   "imagens/produto 1111.png" 1775572025 17449 d05e73d8091427a9ce015d4b69a929a1 ""
-  "main.aux" 1775575577 4925 fdf5cfe919efd6cc4bcf8be4773995a1 "pdflatex"
-  "main.out" 1775575577 2428 2ae11b0170ddb3e3481c18bcf20181cf "pdflatex"
+  "main.aux" 1775575990 4727 28763248a72121543c6b91c647fcc2e7 "pdflatex"
+  "main.out" 1775575990 2096 e9f7785e9f003e9b953677cd9549979f "pdflatex"
   "main.tex" 1775522915 1154 8fb321a116dabb3154b187b631ee8db9 ""
-  "main.toc" 1775575577 1066 8890a2c231aff63c4bd02ae7868d8498 "pdflatex"
-  "sections/questao1.tex" 1775522915 1255 53a84ed040da3b73ff78f52b790aef71 ""
+  "main.toc" 1775575990 912 375fe05545a33c34ec391c6a8165e7f3 "pdflatex"
+  "sections/questao1.tex" 1775575985 883 ce5dd89bcfec0886a1e560e0c617c740 ""
   "sections/questao2.tex" 1775522915 4418 f7f58a975808cf19a6a143b0bddff265 ""
   "sections/questao3.tex" 1775522915 2693 e8636e2c3a66f41bc3aecec7aa73e74f ""
-  "sections/questao5.tex" 1775575572 3191 7680189d4a41944e89cf7b6b8a300bd9 ""
+  "sections/questao5.tex" 1775575919 2943 c5087c460f337396e9219b8db72d2272 ""
   (generated)
   "main.aux"
   "main.log"

@@ -1,9 +1,5 @@
 \section{Tarefa 6.1: Projeto e simula\c{c}\~ao de um circuito multiplicador de 2 bits}
 
-Na etapa de simula\c{c}\~ao, foi solicitado projetar um circuito capaz de multiplicar dois n\'umeros de 2 bits, gerando um produto de 4 bits. O relat\'orio deve conter o desenvolvimento do esquem\'atico, as equa\c{c}\~oes obtidas e o diagrama de temporiza\c{c}\~ao referente aos casos pedidos no roteiro.
-
-\subsection{Desenvolvimento do projeto}
-
 O projeto foi feito a partir da gera\c{c}\~ao dos produtos parciais com portas AND entre os bits de entrada $A_1A_0$ e $B_1B_0$. O bit menos significativo \'e dado diretamente por $C_0 = A_0B_0$. Para o segundo bit, somam-se os termos cruzados $A_0B_1$ e $A_1B_0$ com uma porta XOR, produzindo $M_1$. O terceiro bit \'e obtido com a soma (XOR) entre $A_1B_1$ e o carry da soma anterior, que \'e $(A_0B_1)(A_1B_0)$, resultando em $M_2$. Por fim, o bit mais significativo $M_3$ corresponde ao carry final, implementado no esquem\'atico como o produto $A_1A_0B_1B_0$.
 
 \begin{figure}[H]

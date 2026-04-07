@@ -1,6 +1,6 @@
-PWD C:\Users\levif\OneDrive\Área de Trabalho\arquivos - ITA\primeiro semestre\EEA-21\lab3\lab3_eea21
+PWD c:\Users\levif\OneDrive\Área de Trabalho\arquivos - ITA\primeiro semestre\EEA-21\lab3\lab3_eea21
 INPUT C:\Users\levif\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT main.tex
+INPUT c:\Users\levif\OneDrive\Área de Trabalho\arquivos - ITA\primeiro semestre\EEA-21\lab3\lab3_eea21\main.tex
 OUTPUT main.log
 INPUT C:\Users\levif\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\levif\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -308,10 +308,10 @@ INPUT C:\Users\levif\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\sections\questao1.tex
 INPUT .\sections\questao1.tex
 INPUT sections\questao1.tex
-INPUT C:\Users\levif\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
 INPUT .\sections\questao2.tex
 INPUT .\sections\questao2.tex
 INPUT sections\questao2.tex
+INPUT C:\Users\levif\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
 INPUT C:\Users\levif\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\imagens\PrimeiroDesligado.jpeg
 INPUT .\imagens\PrimeiroDesligado.jpeg
